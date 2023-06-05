@@ -1,10 +1,8 @@
-
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
 #include "server.h"
 #include "client.h"
 
-/*
 TEST(HW1Test, TEST1) {
     Server server{};
     auto bryan{server.add_client("bryan")};
@@ -142,11 +140,11 @@ TEST(HW1Test, TEST15) {
     std::string hash = crypto::sha256(mempool + std::to_string(nonce));
     EXPECT_TRUE(hash.substr(0, 10).find("000") != std::string::npos);
     // MINER is: sarah || bryan || clint
+    std::cerr << bryan->get_wallet() << " " << clint->get_wallet() << " " << sarah->get_wallet() << std::endl;
     EXPECT_TRUE(bryan->get_wallet()==4.5 || bryan->get_wallet()==10.75 || bryan->get_wallet()==4.5);
     EXPECT_TRUE(clint->get_wallet()==3.5 ||clint->get_wallet()==3.5 ||clint->get_wallet()==9.75);
     EXPECT_TRUE(sarah->get_wallet()==13.25 || sarah->get_wallet()==7 || sarah->get_wallet()==7);
 }
-*/
 
 
 
