@@ -1,16 +1,22 @@
 #ifndef UNIQUE_PTR
 #define UNIQUE_PTR
 
+#include <stdexcept>
+
 template <typename T>
 class UniquePtr {
   T* _p;
 
  public:
   UniquePtr(T* p = nullptr) : _p{p} {}
-
-  auto get() const -> T* {
-    return _p;
+  UniquePtr(UniquePtr<T>& u) = delete; // copy constructor
+  ~UniquePtr() {
+    delete _p;
+    _p = nullptr;
   }
+  UniquePtr& operator=(const UniquePtr& b) = delete; // copy assignment
+
+  auto get() const -> T* { return _p; }
   auto reset(T* t = nullptr) -> void {
     delete _p;
     _p = t;

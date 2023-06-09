@@ -1,10 +1,11 @@
 #include <gtest/gtest.h>
 #include <iostream>
+#include <memory>
 #include "shared_ptr.h"
 #include "unique_ptr.h"
 
 int main(int argc, char** argv) {
-  if (false) {  // make false to run unit-tests
+  if (true) {  // make false to run unit-tests
   } else {
     ::testing::InitGoogleTest(&argc, argv);
     std::cout << "RUNNING TESTS ..." << std::endl;
