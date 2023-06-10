@@ -1,10 +1,8 @@
 BasedOnStyle: Google
 DerivePointerAlignment: false
-PointerAlignment: Right
+PointerAlignment: Left # Default in Google style is Left
 ColumnLimit: 120
 
 # Default for clang-8, changed in later clangs. Set explicitly for forwards
 # compatibility for students with modern clangs
 IncludeBlocks: Preserve
-
-PointerAlignment: Left
